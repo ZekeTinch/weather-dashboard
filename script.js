@@ -50,7 +50,9 @@ function getWeather(lat, lon, cityName){
         $('#today').append(todaysForecast);
 
         // loop over data.list and get every 8th value
-
+        for (let i = 8; i < getWeather.length; i++) {
+            
+        }
     })
 }
 // getLocation('paris')
