@@ -17,7 +17,7 @@ function addTask(event) {
 
 
 function getLocation(cityName){
-    const apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${apiKey}`
+    const apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${apiKey}`
     fetch(apiUrl).then(function (response){
         return response.json()
     }).then(function(data){
@@ -28,7 +28,7 @@ function getLocation(cityName){
 }
 
 function getWeather(lat, lon, cityName){
-    const apiUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`
+    const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`
     fetch(apiUrl).then(function (response){
         return response.json()
     }).then(function(data){
